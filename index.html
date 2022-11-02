@@ -1,0 +1,443 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src="https://superal.github.io/canvas2image/canvas2image.js"></script>
+    <div class="container">
+    <div class="capture">
+       
+        <div id="mydiv">
+            <p id="title" >عنوان مطلب</p>
+        </div>
+  
+        <div id="mydiv2">
+          <p id="title2" >جمله زیر متن</p>
+      </div>
+  
+        <img id="back" src="img/10.jpg">
+      
+
+
+    </div><!-- End capture div --> 
+    
+<div class="EditorBox">
+
+    <p id="set">
+      <input class="radioBtn" type="radio" id="10th" name="grade" value="img/10.jpg" checked>
+      <label for="10th"> پست پایه دهم</label><br>
+      <input class="radioBtn" type="radio" id="11th" name="grade" value="img/11.jpg">
+      <label for="11th">پست پایه یازدهم</label><br>
+      <input class="radioBtn" type="radio" id="12th" name="grade" value="img/12.jpg">
+      <label for="12th">پست پایه دوازدهم</label>
+    </p>
+
+
+    <p id="set">
+        <input class="radioBtn" type="radio" id="10th-vid" name="grade" value="img/10vid.jpg" >
+        <label for="10th">کاور ویدئو دهم</label><br>
+        <input class="radioBtn" type="radio" id="11th-vid" name="grade" value="img/11vid.jpg">
+        <label for="11th">کاور ویدئو یازدهم</label><br>
+        <input class="radioBtn" type="radio" id="12th-vid" name="grade" value="img/12vid.jpg">
+        <label for="12th">کاور ویدئو دوازدهم</label>
+      </p>
+
+<p id="set">عنوان <br><textarea placeholder="بنویسید" value="عنوان مطلب" id="write"></textarea></p>
+    <p id="set">رنگ عنوان<br>
+    <input type="color" id="title-color" value="#000"></p>
+    <p id="set">اندازه فونت<input type="range" min="10" max="300" value="70" id="font-size"/></p>
+    <p id="set">اندازه پاراگراف<input type="range" min="0" max="700" value="300" id="P-width"/></p>
+    
+
+       
+    <p id="set">زیرمتن <br><textarea placeholder="جمله توضیح زیر عنوان" value="عنوان مطلب" id="write2"></textarea></p>
+    <p id="set">رنگ زیرمتن<br>
+      <input type="color" id="title-color2" value="#000"></p>
+      <p id="set">اندازه فونت زیرمتن<input type="range" min="10" max="300" value="70" id="font-size2"/></p>
+      <p id="set">اندازه پاراگراف زیرمتن<input type="range" min="0" max="700" value="300" id="P-width2"/></p>
+   
+      
+    <button type="button" class="btn btn-default">دانلود این طرح</button>
+  </div>
+
+</div>
+    <style>
+
+ 
+@font-face {
+	font-family: KalamehWeb;
+	font-style: normal;
+	font-weight: 100;
+	src: url('fonts/woff2/KalamehWeb-Thin.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('fonts/woff/KalamehWeb-Thin.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: KalamehWeb;
+	font-style: normal;
+	font-weight: 200;
+	src: url('fonts/woff2/KalamehWeb-ExtraLight.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('fonts/woff/KalamehWeb-ExtraLight.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: KalamehWeb;
+	font-style: normal;
+	font-weight: 300;
+	src: url('fonts/woff2/KalamehWeb-Light.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('fonts/woff/KalamehWeb-Light.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: KalamehWeb;
+	font-style: normal;
+	font-weight: 500;
+	src: url('fonts/woff2/KalamehWeb-Medium.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('fonts/woff/KalamehWeb-Medium.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: KalamehWeb;
+	font-style: normal;
+	font-weight: 600;
+	src: url('fonts/woff2/KalamehWeb-Semibold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('fonts/woff/KalamehWeb-Semibold.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+
+@font-face {
+	font-family: KalamehWeb;
+	font-style: normal;
+	font-weight: 800;
+	src: url('fonts/woff2/KalamehWeb-ExtraBold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('fonts/woff/KalamehWeb-ExtraBold.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: KalamehWeb;
+	font-style: normal;
+	font-weight: 900;
+	src: url('fonts/woff2/KalamehWeb-Black.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('fonts/woff/KalamehWeb-Black.woff') format('woff')  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: KalamehWeb;
+	font-style: normal;
+	font-weight: bold;
+	src: url('fonts/woff2/KalamehWeb-Bold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('fonts/woff/KalamehWeb-Bold.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: KalamehWeb;
+	font-style: normal;
+	font-weight: normal;
+	src: url('fonts/woff2/KalamehWeb-Regular.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('fonts/woff/KalamehWeb-Regular.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+
+
+
+*{
+    font-family: KalamehWeb !important;
+}
+input{
+  border: none;
+    outline: none;
+    appearance: none;
+    background: #d8d8d8;
+    border-radius: 60px;
+    padding: 5px;
+}
+.radioBtn{
+
+}
+
+body{
+  background: #bbbbbb;
+}
+
+.container{
+  display: flex;
+}
+.capture{
+    width: 500px;
+    background: #bbbbbb;
+    overflow: hidden ;
+    margin: 40px;
+    height: min-content;
+}
+
+#mydiv {
+      position: absolute;
+      z-index: 9;
+      text-align: right; 
+     cursor: move;
+    }
+ 
+    #title{
+font-size: 70px;
+font-weight: 900;
+width: 300px;
+word-break: break-word;
+    }
+
+    #mydiv {
+      position: absolute;
+      z-index: 9;
+      text-align: right; 
+     cursor: move;
+    }
+ 
+    #title{
+font-size: 70px;
+font-weight: 900;
+width: 300px;
+word-break: break-word;
+    }
+
+    #mydiv2 {
+      position: absolute;
+      z-index: 9;
+      text-align: right; 
+     cursor: move;
+    }
+ 
+    #title2{
+font-size: 70px;
+width: 300px;
+word-break: break-word;
+    }
+
+#set{
+  width: 180px;
+  display: inline-table;
+}
+    .EditorBox{
+      width: 366px;
+      margin: 40px;
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 20px;
+    }
+
+    textarea{
+      border-radius: 10px;
+    border: none;
+    background: #e5e5e5;
+    }
+    
+    
+   button{
+    border-radius: 70px;
+    border: none;
+    font-weight: bold;
+    padding: 10px 40px;
+    font-size: 18px;
+    color: #fff;
+    background: #0075ff;
+    bottom: 0;
+    margin-top: 20px;
+    }
+    #back{
+      width: 100%;
+    }
+    </style>
+    <script>
+        document.querySelector('button').addEventListener('click', function() {
+            html2canvas(document.querySelector('.capture'), {
+                onrendered: function(canvas) {
+                    // document.body.appendChild(canvas);
+                  return Canvas2Image.saveAsPNG(canvas);
+                }
+            });
+        });
+
+////////////
+
+  //Make the DIV element draggagle:
+  dragElement(document.getElementById("mydiv"));
+    
+    function dragElement(elmnt) {
+      var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+      if (document.getElementById(elmnt.id + "header")) {
+        /* if present, the header is where you move the DIV from:*/
+        document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+      } else {
+        /* otherwise, move the DIV from anywhere inside the DIV:*/
+        elmnt.onmousedown = dragMouseDown;
+      }
+    
+      function dragMouseDown(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // get the mouse cursor position at startup:
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = closeDragElement;
+        // call a function whenever the cursor moves:
+        document.onmousemove = elementDrag;
+      }
+    
+      function elementDrag(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // calculate the new cursor position:
+        pos1 = pos3 - e.clientX;
+        pos2 = pos4 - e.clientY;
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        // set the element's new position:
+        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+      }
+    
+      function closeDragElement() {
+        /* stop moving when mouse button is released:*/
+        document.onmouseup = null;
+        document.onmousemove = null;
+      }
+    }
+
+
+
+  //////////////////////
+
+  
+  //Make the DIV element draggagle:
+  dragElement(document.getElementById("mydiv2"));
+    
+    function dragElement(elmnt) {
+      var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+      if (document.getElementById(elmnt.id + "header")) {
+        /* if present, the header is where you move the DIV from:*/
+        document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+      } else {
+        /* otherwise, move the DIV from anywhere inside the DIV:*/
+        elmnt.onmousedown = dragMouseDown;
+      }
+    
+      function dragMouseDown(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // get the mouse cursor position at startup:
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = closeDragElement;
+        // call a function whenever the cursor moves:
+        document.onmousemove = elementDrag;
+      }
+    
+      function elementDrag(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // calculate the new cursor position:
+        pos1 = pos3 - e.clientX;
+        pos2 = pos4 - e.clientY;
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        // set the element's new position:
+        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+      }
+    
+      function closeDragElement() {
+        /* stop moving when mouse button is released:*/
+        document.onmouseup = null;
+        document.onmousemove = null;
+      }
+    }
+
+///////////
+
+var slider = document.getElementById('font-size');
+slider.addEventListener('input', function() {
+    var size = slider.value;
+    document.getElementById('title').style.fontSize = size + "px";
+});
+
+///////////////
+
+var slider2 = document.getElementById('P-width');
+slider2.addEventListener('input', function() {
+    var size = slider2.value;
+    document.getElementById('title').style.width = size });
+
+
+////////////////
+var write = document.getElementById('write');
+write.addEventListener('input', function() {
+    var theTitle = write.value;
+    document.getElementById('title').innerHTML =  theTitle });
+
+/////////
+    var titleColor = document.getElementById('title-color');
+    titleColor.addEventListener('input', function() {
+    var theColorCode = titleColor.value;
+    document.getElementById('title').style.color = theColorCode });
+
+
+    
+//////////////////
+
+var backImg10 = document.getElementById('10th');
+backImg10.addEventListener('input', function() {
+    var theUrl = backImg10.value;
+    document.getElementById('back').src = theUrl });
+
+    var backImg11 = document.getElementById('11th');
+backImg11.addEventListener('input', function() {
+    var theUrl = backImg11.value;
+    document.getElementById('back').src = theUrl });
+
+   var backImg12 = document.getElementById('12th');
+backImg12.addEventListener('input', function() {
+    var theUrl = backImg12.value;
+    document.getElementById('back').src = theUrl });
+
+    var backImg10vid = document.getElementById('10th-vid');
+backImg10vid.addEventListener('input', function() {
+    var theUrl = backImg10vid.value;
+    document.getElementById('back').src = theUrl });
+
+    var backImg11vid = document.getElementById('11th-vid');
+backImg11vid.addEventListener('input', function() {
+    var theUrl = backImg11vid.value;
+    document.getElementById('back').src = theUrl });
+
+   var backImg12vid = document.getElementById('12th-vid');
+backImg12vid.addEventListener('input', function() {
+    var theUrl = backImg12vid.value;
+    document.getElementById('back').src = theUrl });
+
+//////////////////
+
+/////////
+var titleColor2 = document.getElementById('title-color2');
+    titleColor2.addEventListener('input', function() {
+    var theColorCode = titleColor2.value;
+    document.getElementById('title2').style.color = theColorCode });
+
+
+////////////////
+var write2 = document.getElementById('write2');
+write2.addEventListener('input', function() {
+    var theTitle = write2.value;
+    document.getElementById('title2').innerHTML =  theTitle });
+
+/////////
+
+var sliderSUB = document.getElementById('font-size2');
+sliderSUB.addEventListener('input', function() {
+    var size = sliderSUB.value;
+    document.getElementById('title2').style.fontSize = size + "px";
+});
+
+///////////////
+
+var sliderSUB2 = document.getElementById('P-width2');
+sliderSUB2.addEventListener('input', function() {
+    var size = sliderSUB2.value;
+    document.getElementById('title2').style.width = size });
+
+    </script>
+
+</html>
